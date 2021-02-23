@@ -13,14 +13,3 @@ steps:
 - task: oc-setup@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'Francis Demo'
-- task: oc-cmd@2
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'Francis Demo'
-    cmd: 'oc start-build openshift-roadshow-dot-net-dev-git --follow --wait -n hvanderm-dev'
-- task: oc-cmd@2
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'Francis Demo'
-    cmd: 'oc status'
