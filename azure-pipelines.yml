@@ -18,4 +18,9 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OC Staging'
-    cmd: 'oc start-build openshift-roadshow-dot-net-dev'
+    cmd: 'oc start-build openshift-roadshow-dot-net-dev -n hvanderm-stage'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OC Staging'
+    cmd: 'oc status'
