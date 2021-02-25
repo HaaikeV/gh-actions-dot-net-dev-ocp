@@ -14,3 +14,13 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'tfg-openshift'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'tfg-openshift'
+    cmd: 'oc start-build tfg-dot-net-dev-git -n hvanderm-dev --follow --wait'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'tfg-openshift'
+    cmd: 'oc status'
