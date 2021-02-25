@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: task
+- task: oc-setup@2
   inputs:
-    connectionType: ''
-    openshiftService: ''
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'tfg-openshift'
